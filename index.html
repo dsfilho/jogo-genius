@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Genesis</title>
+</head>
+<body>
+    <div class="main-game">
+      <div class="tabela-score-game">
+             <h1> Vamos jogar Genius!</h1>
+             <input type="button" onclick="playGame()" value="Iniciar Jogo">
+             <input type="reset" onclick="window.location.reload()" value="Limpar Score">
+       <table id="table-score">
+        <tbody>
+             <tr>
+               <th>Jogador</th>
+               <th>Pontuação</th>
+             </tr> 
+           
+        </tbody>
+       </table>
+      </div>      
+
+
+            <div class="game">
+                <div class="genius">
+                    <div class="blue" name="blue"></div>
+                    <div class="yellow" name="yellow"></div>
+                    <div class="red" name="red"></div>
+                    <div class="green" name="green"></div>
+                </div>
+               
+          </div>
+          
+  </div>
+    <script type="text/javascript" src="js/jogo.js"></script>
+</body>
+</html>
