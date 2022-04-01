@@ -22,7 +22,7 @@ Para executar o jogo você pode:
 
 Após baixar ou clonar o repositório basta abrir o index.html em seu navegador.
 
-3. Testar diretamente em testesgithub.mesalvati.com.br/jogo-genius/index.html
+3. Testar diretamente em (http://testesgithub.mesalvati.com.br/jogo-genius/index.html)
 
 
 
