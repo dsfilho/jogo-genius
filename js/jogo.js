@@ -87,11 +87,14 @@ let nextLevel = () => {
 
 //funcao para game over
 let gameOver = () => {
-    alert(`Pontuação: ${score}!\nVocê errou!\nClique em (Iniciar Jogo) para iniciar um novo jogo`);
+    alert(`Pontuação: ${score}!\nVocê errou!\nClique em ok para iniciar um novo jogo`);
     order = [];
     clickedOrder = [null];
-    addDataTableScore(playerName,score);
-     return;
+    
+    if(playerName!=null){
+        addDataTableScore(playerName,score);
+    }
+    playGame();
 
     
 }
@@ -101,10 +104,13 @@ let playGame = () => {
     playerName = prompt("Digite o seu nome","Visitante");
     score = 0;
       
-    if(playerName==null) /*Se clicou em cancelar não inicia o jogo */
+    if(playerName==null){ /*Se clicou em cancelar não inicia o jogo */
          return;
-    
-    nextLevel();
+    }else{
+        addEventsToButtons();
+        nextLevel();
+    }
+
 }
 
 
@@ -122,7 +128,15 @@ let addDataTableScore = (playerName,playerScore) =>{
 }
 
 //eventos de clique para as cores
-green.onclick = () => click(0);
-red.onclick = () => click(1);
-yellow.onclick = () => click(2);
-blue.onclick = () => click(3);
+let addEventsToButtons = () =>{
+
+    green.onclick = () => click(0);
+    red.onclick = () => click(1);
+    yellow.onclick = () => click(2);
+    blue.onclick = () => click(3);
+}
+
+let resetGame =() =>{
+     window.location.reload();
+
+}
